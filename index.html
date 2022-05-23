@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>factorial</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <header><h1>Factorial de un Número</h1></header>
+	<section class="res">
+	<br><br><br>
+	<input type="number" id="numeroA">
+	<button id="btn">Calcular</button>
+	<br><br><br>
+    <h2>Resultado del Calculo:</p>
+	<div id="resultado"></div>
+
+	<script>
+		var b=document.getElementById('btn');
+		p.addEventListener('click',dias);
+		
+		function dias(p)
+        {
+            var dias=["Lunes","Martes","Miercoles","Jueves","Viernes","Sabado","Domingo"];
+            midia=p
+            midia--;
+            if(midia>=0 && midia<7)
+            {
+                r= dias[midia];
+            }
+            else
+            {
+                r="No existe ese dia.";
+            }
+        return r
+        }
+        dia=prompt("Introduce tu dia favorito",0)
+        document.getElementById("salida").innerHTML ="Es el dia "+dias(dia);
+	</script>
+    </section>
+</body>
+</html>
