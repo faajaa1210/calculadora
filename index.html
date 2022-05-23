@@ -4,41 +4,157 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>factorial</title>
+    <title>suma de 2 numeros</title>
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-    <header><h1>Factorial de un Número</h1></header>
-	<section class="res">
-	<br><br><br>
-	<input type="number" id="numeroA">
-	<button id="btn">Calcular</button>
-	<br><br><br>
-    <h2>Resultado del Calculo:</p>
-	<div id="resultado"></div>
-
-	<script>
-		var b=document.getElementById('btn');
-		p.addEventListener('click',dias);
-		
-		function dias(p)
-        {
-            var dias=["Lunes","Martes","Miercoles","Jueves","Viernes","Sabado","Domingo"];
-            midia=p
-            midia--;
-            if(midia>=0 && midia<7)
-            {
-                r= dias[midia];
-            }
-            else
-            {
-                r="No existe ese dia.";
-            }
-        return r
+   <header>
+      <h1>TU DIA FAVORITO</h1>
+   </header>
+   <section class="res">
+      <input type="number"id="numeroA">
+      <button id="btns" class="button">BUSCAR TU DIA</button>
+      <br><br><br>
+       <h2 class="subtitulo">Tu dia Favorito es:</h2>
+       <div id="salida"></div>
+   </section>
+   <script language="javascript">
+       var midia=document.getElementById("btns");
+       midia.addEventListener("click",diasc);
+   
+       function diasc() 
+       {
+      var dias=["Lunes","Martes","Miercoles","Jueves","Viernes","Sabado","Domingo"];
+      midia=parseInt(document.getElementById("numeroA").value);
+      midia--;
+      if(midia>=0 && midia<7)
+       document.getElementById("salida").innerHTML="TU DIA FAVORITO ES..."+dias[midia]
+       else
+       document.getElementById("salida").innerHTML="NO EXISTE ESE DIA.."
         }
-        dia=prompt("Introduce tu dia favorito",0)
-        document.getElementById("salida").innerHTML ="Es el dia "+dias(dia);
-	</script>
-    </section>
-</body>
-</html>
+   </script>
+   
+    <br><br><br>
+   
+   <header><h1>SUMAR DOS NUMEROS</h1></header>
+    <section class="res">
+    <br><br><br>
+    <input type="number" id="nro1">
+       <input type="number" id="nro2">
+       <button id="btn" class="button">+</button>
+       <button id="btn2" class="button">-</button>
+       <button id="btn3" class="button">*</button>
+       <button id="btn4" class="button">/</button>
+       <button id="btn5" class="button">^</button>
+       <button id="btn6" class="button">raiz</button>
+       <button id="btn7" class="button">exp</button>
+       <button id="btn8" class="button">seno</button>
+       <button id="btn9" class="button">coseno</button>
+       
+    <br><br><br>
+       <h2 class="subtitulo">Resultado del Calculo:</p>
+    <div id="resultado"></div>
+   
+    <script>
+     var b=document.getElementById('btn');
+     b.addEventListener('click',suma);
+     var r=document.getElementById('btn2');
+     r.addEventListener('click',resta);
+     var m=document.getElementById('btn3');
+     m.addEventListener('click',multiplicacion);
+     var d=document.getElementById('btn4');
+     d.addEventListener('click',division);
+     var e = document.getElementById("btn5");
+     e.addEventListener("click",potencia);
+     var f = document.getElementById("btn6");
+     f.addEventListener("click",raizcuadrada);
+     var g = document.getElementById("btn7");
+     g.addEventListener("click",exp);
+     var h = document.getElementById("btn8");
+     h.addEventListener("click",seno);
+     var i = document.getElementById("btn9");
+     i.addEventListener("click",coseno);
+   
+     function suma() 
+     {
+      var n1=parseInt(document.getElementById('nro1').value);
+      var n2=parseInt(document.getElementById('nro2').value);
+   
+               var s=n1+n2;
+      
+      document.getElementById("resultado").innerHTML = n1+"+"+n2+"="+s
+     }
+           function resta() 
+     {
+      var n1=parseInt(document.getElementById('nro1').value);
+      var n2=parseInt(document.getElementById('nro2').value);
+
+               var s=n1-n2;
+      
+      document.getElementById("resultado").innerHTML = n1+"-"+n2+"="+s
+     }
+        function multiplicacion() 
+     {
+      var n1=parseInt(document.getElementById('nro1').value);
+      var n2=parseInt(document.getElementById('nro2').value);
+
+               var s=n1*n2;
+      
+      document.getElementById("resultado").innerHTML = n1+"*"+n2+"="+s
+     }
+      function division() 
+     {
+      var n1=parseInt(document.getElementById('nro1').value);
+      var n2=parseInt(document.getElementById('nro1').value);
+      
+               var s=n1/n2;
+      
+      document.getElementById("resultado").innerHTML = n1+"/"+n2+"="+s
+     }
+     function potencia()
+     {
+       var n1 = parseInt(document.getElementById("nro1").value)
+       var n2 = parseInt(document.getElementById("nro2").value)
+                   
+       var po = Math.pow(n1,n2)
+   
+       document.getElementById("resultado").innerHTML = n1+"^("+n2+")="+po;
+      }
+   
+      function raizcuadrada()
+      {
+       var n1 = parseInt(document.getElementById("nro1").value)
+                   
+       var ra = Math.sqrt(n1);
+
+       document.getElementById("resultado").innerHTML = "sqrt("+n1+")="+ra;
+       }
+      
+      function exp()
+      {
+       var n1 = parseInt(document.getElementById("nro1").value)
+                   
+       var ex = Math.exp(n1);
+
+       document.getElementById("resultado").innerHTML = "e("+n1+")="+ex;
+      }
+      function seno()
+      {
+       var n1 = parseInt(document.getElementById("nro1").value)
+                   
+       var se = Math.sin(n1);
+
+       document.getElementById("resultado").innerHTML = "seno("+n1+")="+se;
+       }
+      function coseno()
+      {
+       var n1 = parseInt(document.getElementById("nro1").value)
+                   
+       var co = Math.cos(n1);
+
+       document.getElementById("resultado").innerHTML = "coseno("+n1+")="+co;
+       }
+
+
+    </script>
+   </section>
